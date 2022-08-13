@@ -1,6 +1,9 @@
-﻿WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+﻿using CommandAPI.Data;
+
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<ICommandAPIRepo, MockCommandAPIRepo>();
 WebApplication app = builder.Build();
 
 if (app.Environment.IsDevelopment())

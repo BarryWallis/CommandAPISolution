@@ -6,15 +6,15 @@ public record Command()
 {
     [Key]
     [Required]
-    public int Id { get; init; }
+    public int Id { get; init; } = 0;
 
     [Required]
     [MaxLength(250)]
-    public string HowTo { getl init; }
+    public string HowTo { get; init; } = string.Empty;
 
     [Required]
-    public string Platform { get; init; }
+    public string Platform { get; init; } = string.Empty;
 
     [Required]
-    public string HowTo { get; init; }
+    public string CommandLine { get; init; } = string.Empty;
 }
